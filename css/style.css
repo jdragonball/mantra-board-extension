@@ -6,37 +6,78 @@ html, body {
 }
 
 html {
-  background: url("../images/일_스티브잡스명상.jpeg") no-repeat;
-  background-size: cover;
+  /* background: url("../images/일_스티브잡스명상.jpeg") no-repeat;
+  background-size: cover; */
+
+  /* -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  transform: scale(1.02);
+  z-index: -1; */
 }
 
 body {
   font-family: 'Noto Serif KR', serif;
 }
 
+.bg-img {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -2000;
+  background: url("../images/일_스티브잡스명상.jpeg") no-repeat;
+  background-size: cover;
+
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
 .container {
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.mantra-box:empty:before {
+.mantra-wrapper {
+  width: 100%;
+  border: 5px dashed;
+  border-radius: 30px;
+  border-color: rgba(255, 255, 255, 0);
+  margin: 50px;
+  max-height: calc(100% - 100px);
+  overflow: hidden;
+
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.mantra-wrapper:focus-within {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.mantra:empty:before {
   content: attr(placeholder);
   display: block; /* For Firefox */
   opacity: .3;
 }
 
-.mantra-box {
-  display: inline-block;
+.mantra {
   align-items: center;
   text-align: center;
   color: rgba(255, 255, 255);
-  width: 100%;
-  max-height: calc(100% - 100px);
-  overflow: hidden;
+  /* max-height: calc(100% - 100px); */
+  /* overflow: hidden; */
   font-size: 8rem;
-  margin: 50px;
+  /* margin: 50px; */
   padding: 20px 20px 30px 20px;
   white-space: pre-wrap;
 
@@ -46,11 +87,8 @@ body {
   transition: all .5s;
 }
 
-.mantra-box:focus {
+.mantra:focus {
   color: rgba(255, 255, 255, 0.8);
-  font-style: italic;
-  border: 5px dashed;
-  border-radius: .2em;
   outline: none;
 
   -webkit-transform: skewX(-7deg);

@@ -1,7 +1,8 @@
 function init() {
   const MANTRA_KEY = "MANTRA";
 
-  const mantraBox = document.querySelector(".mantra-box");
+  const mantraBox = document.querySelector(".mantra");
+  const bgImg = document.querySelector(".bg-img");
 
   // 기존 만트라 불러오기
   const mantra = localStorage.getItem(MANTRA_KEY);
@@ -30,9 +31,18 @@ function init() {
     }
   });
 
+  mantraBox.addEventListener("focus", (e) => {
+    bgImg.style.cssText += "-webkit-filter: blur(5px);";
+    bgImg.style.cssText += "-moz-filter: blur(5px);"
+    bgImg.style.cssText += "-o-filter: blur(5px);"
+    bgImg.style.cssText += "-ms-filter: blur(5px);"
+    bgImg.style.cssText += "-ms-filter: blur(5px);"
+  });
+
   // 새 만트라 입력후 포커스 아웃
   mantraBox.addEventListener("focusout", (e) => {
     localStorage.setItem(MANTRA_KEY, mantraBox.innerHTML);
+    bgImg.style.filter = null;
   });
 };
 
