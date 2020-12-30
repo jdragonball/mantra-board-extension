@@ -38,7 +38,6 @@ function init() {
 
   // 만트라 입력 이벤트
   mantraBox.addEventListener("input", (e) => {
-    console.log(e.target.textContent);
     // 문자가 비어있는 경우
     if (!mantraBox.textContent.trim()) {
       mantraBox.innerHTML = "";

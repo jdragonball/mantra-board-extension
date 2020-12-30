@@ -1,2 +1,8 @@
-# mantra-board-extension
-만트라 크롬 확장 프로그램
+# Selective Attention
+---
+
+ “나는 많은 시간 축구를 한다.  
+ 공을 찰 수 없을 때는 축구에 대해 이야기를 한다.  
+ 축구에 대해 이야기하지 않을 때는 축구에 대해 생각을 한다.”  
+
+ ― Puskás Ferenc, 1927 ~ 2006
