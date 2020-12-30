@@ -1,4 +1,8 @@
 function init() {
+  document.body.onload = function () {
+    document.body.style.opacity = 1;
+  };
+
   const MANTRA_KEY = "MANTRA";
 
   const mantraBox = document.querySelector(".mantra");
