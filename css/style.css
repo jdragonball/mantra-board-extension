@@ -55,7 +55,7 @@ body {
 }
 
 .mantra-wrapper:focus-within {
-  border-color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, .8);
 }
 
 .mantra:empty:before {
