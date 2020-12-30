@@ -11,10 +11,15 @@ function init() {
     mantraBox.innerHTML = mantra;
   }
 
-  
+  // 만트라 클릭
   mantraBox.addEventListener("click", (e) => {
     mantraBox.setAttribute("contenteditable", true);
     mantraBox.focus();
+  });
+
+  // 만트라 포커스
+  mantraBox.addEventListener("focus", (e) => {
+    bgImg.classList.add("focus");
   });
 
   // 엔터키 입력
@@ -29,10 +34,6 @@ function init() {
         mantraBox.setAttribute("contenteditable", false);
       }
     }
-  });
-
-  mantraBox.addEventListener("focus", (e) => {
-    bgImg.classList.add("focus");
   });
 
   // 새 만트라 입력후 포커스 아웃
