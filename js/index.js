@@ -17,28 +17,38 @@ function init() {
     mantraBox.focus();
   });
 
-  // 만트라 포커스
+  // 만트라 포커스할때 배경 이미지 블러처리
   mantraBox.addEventListener("focus", (e) => {
     bgImg.classList.add("focus");
   });
 
-  // 엔터키 입력
+  // 만트라 입력 후 엔터키 입력
   mantraBox.addEventListener("keypress", (e) => {
     if (e.keyCode == 13) {
       if (!e.shiftKey) {
         e.preventDefault();
-        if (!mantraBox.textContent.trim()) {
-          mantraBox.innerHTML = "";
-        }
-        mantraBox.dispatchEvent(new Event("focusout"));
         mantraBox.setAttribute("contenteditable", false);
       }
     }
   });
 
-  // 새 만트라 입력후 포커스 아웃
+  // 만트라 입력 이벤트
+  mantraBox.addEventListener("input", (e) => {
+    console.log(e.target.textContent);
+    // 문자가 비어있는 경우
+    if (!mantraBox.textContent.trim()) {
+      mantraBox.innerHTML = "";
+    }
+  });
+
+  // 만트라 입력후 포커스 아웃
   mantraBox.addEventListener("focusout", (e) => {
-    localStorage.setItem(MANTRA_KEY, mantraBox.innerHTML);
+    // 문자가 비어있는 경우
+    if (!mantraBox.textContent.trim()) {
+      mantraBox.innerHTML = "";
+    }
+
+    localStorage.setItem(MANTRA_KEY, mantraBox.textContent);
     bgImg.classList.remove("focus");
   });
 };
