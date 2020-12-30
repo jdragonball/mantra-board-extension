@@ -1,9 +1,20 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap');
+
 html, body {
   height: 100%;
 }
 
+html {
+  background: url("../images/일_스티브잡스명상.jpeg") no-repeat;
+  background-size: cover;
+}
+
+body {
+  font-family: 'Noto Serif KR', serif;
+}
+
 .container {
-  background-color: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,17 +31,30 @@ html, body {
   display: inline-block;
   align-items: center;
   text-align: center;
-  background-color: antiquewhite;
+  color: rgba(255, 255, 255);
   width: 100%;
   max-height: calc(100% - 100px);
   overflow: hidden;
-  font-size: 7rem;
+  font-size: 8rem;
   margin: 50px;
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
   white-space: pre-wrap;
+
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
 .mantra-box:focus {
-  border: 5px dotted;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+  border: 5px dashed;
+  border-radius: .2em;
   outline: none;
+
+  -webkit-transform: skewX(-7deg);
+  -moz-transform: skewX(-7deg);
+  -o-transform: skewX(-7deg);
+  transform: skewX(-7deg);
 }
