@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+}
+
+.container {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mantra-box:empty:before {
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+  opacity: .3;
+}
+
+.mantra-box {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  background-color: antiquewhite;
+  width: 100%;
+  max-height: calc(100% - 100px);
+  overflow: hidden;
+  font-size: 7rem;
+  margin: 50px;
+  padding: 20px;
+  white-space: pre-wrap;
+}
+
+.mantra-box:focus {
+  border: 5px dotted;
+  outline: none;
+}
