@@ -32,17 +32,13 @@ function init() {
   });
 
   mantraBox.addEventListener("focus", (e) => {
-    bgImg.style.cssText += "-webkit-filter: blur(5px);";
-    bgImg.style.cssText += "-moz-filter: blur(5px);"
-    bgImg.style.cssText += "-o-filter: blur(5px);"
-    bgImg.style.cssText += "-ms-filter: blur(5px);"
-    bgImg.style.cssText += "-ms-filter: blur(5px);"
+    bgImg.classList.add("focus");
   });
 
   // 새 만트라 입력후 포커스 아웃
   mantraBox.addEventListener("focusout", (e) => {
     localStorage.setItem(MANTRA_KEY, mantraBox.innerHTML);
-    bgImg.style.filter = null;
+    bgImg.classList.remove("focus");
   });
 };
 

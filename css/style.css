@@ -5,19 +5,6 @@ html, body {
   height: 100%;
 }
 
-html {
-  /* background: url("../images/일_스티브잡스명상.jpeg") no-repeat;
-  background-size: cover; */
-
-  /* -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  transform: scale(1.02);
-  z-index: -1; */
-}
-
 body {
   font-family: 'Noto Serif KR', serif;
 }
@@ -35,6 +22,14 @@ body {
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
+}
+
+.bg-img.focus {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
 .container {
@@ -74,10 +69,7 @@ body {
   align-items: center;
   text-align: center;
   color: rgba(255, 255, 255);
-  /* max-height: calc(100% - 100px); */
-  /* overflow: hidden; */
   font-size: 8rem;
-  /* margin: 50px; */
   padding: 20px 20px 30px 20px;
   white-space: pre-wrap;
 
