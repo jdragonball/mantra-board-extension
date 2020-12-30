@@ -22,10 +22,10 @@ body {
   background: url("../images/일_스티브잡스명상.jpeg") no-repeat;
   background-size: cover;
 
-  -moz-transition: all .5s;
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+  -moz-transition: all .7s;
+  -webkit-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
 }
 
 .bg-img.focus {
